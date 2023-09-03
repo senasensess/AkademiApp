@@ -1,0 +1,60 @@
+﻿
+@model Candidate
+
+<div class="col-md-12">
+    <div class="card">
+
+        <div class="card-header">
+            <h3 class="card-title">Apply</h3>
+        </div>
+
+        <div class="card-body">
+            <form method="post" asp-action="Apply">
+                <div class="text-danger" asp-validation-summary="All"></div>
+                <div class="from-group my-2">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" class="form-control" />
+                </div>
+                <div class="from-group my-2">
+                    <label asp-for="FirstName"></label>
+                    <input asp-for="FirstName" class="form-control" />
+                </div>
+                <div class="from-group my-2">
+                    <label asp-for="LastName"></label>
+                    <input asp-for="LastName" class="form-control" />
+                </div>
+                <div class="from-group my-2">
+                    <label asp-for="Age"></label>
+                    <select asp-for="Age" class="form-control">
+                        <option value="18">10</option>
+                        <option value="18">15</option>
+                        <option value="18">18</option>
+                        <option value="18">25</option>
+                        <option value="18">35</option>
+                        <option value="18">45</option>
+                    </select>
+                </div>
+
+                <div>
+                    <p>Select One Course</p>
+                    <p>
+                        <input id="mvc" type="radio" asp-for="SelectedCourse" value="ASP.NET Core MVC" checked />
+                        <label>ASP .NET Core MVC</label>
+                    </p>
+                    <p>
+                        <input id="api" type="radio" asp-for="SelectedCourse" value="ASP.NET Core API" />
+                        <label>ASP .NET Core API</label>
+                    </p>
+
+
+                </div>
+
+                <div class="card-footer">
+                    <button class="btn btn-outline-success" type="submit">Register</button>
+                    <a class="btn btn-outline-warning" asp-action="Index" asp-controller="Home">Home</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,26 @@
+﻿@model Candidate
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="display-6">Congratulations @Model.FullName</h3> <!--Tebrikler-->
+    </div>
+    <div class="card-body">
+        <p class="lead">Your applications has been <mark>accepted.</mark> </p> <!--Başvurularınız kabul edilmiştir-->
+        <p class="lead">Many thanks for your interest.</p>
+        <!--İlginiz için çok teşekkürler.-->
+        <blockquote class="blockquote">
+            You have endrolled to @Model.SelectedCourse course.
+
+        </blockquote> <!--Kursa kayıt oldunuz.-->
+        <p class="text-mudet">You applied at @Model.ApplyAt</p>
+        <!--
+        Şuraya başvurdunuz:-->
+        <div class="card-footer m-2">
+            <a class="btn btn-outline-success" asp-action="Index">Applications</a>
+            <a class="btn btn-outline-warning" asp-action="Index" asp-controller="Home">Home</a>
+
+        </div>
+    </div>
+
+</div>
+
